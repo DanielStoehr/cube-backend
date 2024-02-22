@@ -11,6 +11,12 @@ export class UploadService {
   }
 
   async uploadFileFromPath(filePath: string) {
+    if (filePath == '') {
+      this.url = '';
+      return {
+        fileUrl: this.url,
+      };
+    }
     try {
       const fileName = path.basename(filePath);
       const fileDest = `./uploads/${fileName}`; // Destination path where file will be uploaded
@@ -18,7 +24,7 @@ export class UploadService {
       const extFileName = `http://localhost:3000/${fileName}`;
       this.url = extFileName;
       return {
-        fileUrl: extFileName,
+        fileUrl: this.url,
       };
     } catch (error) {
       throw new Error(`Failed to upload file: ${error.message}`);

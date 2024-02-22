@@ -1,0 +1,33 @@
+POST http://localhost:3000/upload
+content-type: application/json
+
+{
+    "filePath": "/home/tsd1sw/projects/cube-backend/source/1.jpeg"
+}
+
+###
+
+POST http://localhost:3000/upload
+content-type: application/json
+
+{
+    "filePath": "/home/tsd1sw/projects/cube-backend/source/2.jpeg" 
+}
+
+###
+
+POST http://localhost:3000/upload
+content-type: application/json
+
+{
+    "filePath": "/home/tsd1sw/projects/cube-backend/source/rexroth1.mp4"
+}
+
+###
+
+POST http://localhost:3000/upload
+content-type: application/json
+
+{
+    "filePath": ""
+}
